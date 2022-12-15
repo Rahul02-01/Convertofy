@@ -7,7 +7,7 @@ import TextArea from './components/TextArea';
 function App() {
   return (
     <>
-      <Navbar title="Changer"/>
+      <Navbar title="Convertofy"/>
       <TextArea start="Let's get the work done..."/>
       <About/>
     </>
