@@ -39,6 +39,14 @@ export default function TextArea(props) {
         setText('');
     }
 
+    const wCount = () =>{
+        if (text.length==0) {
+            return 0;
+        }
+        else{
+            return text.split(' ').length;
+        }
+    }
 
 
 
@@ -63,7 +71,7 @@ export default function TextArea(props) {
             <div className="container mt-4">
                 <h2>Counts</h2>
                 <p className='mb-1'>The number of characters={chCount()}</p>
-                <p className='mb-1'>The number of words={text.split(' ').length}</p>
+                <p className='mb-1'>The number of words={wCount()}</p>
             </div>
         </>
     )
