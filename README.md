@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # About
 
-This is a small React project which has some features like converting lowercase to uppercase and vice versa. Also one can see the words count and character count. The dark mode is applied for the About section as of now.
+This is a small React project which has some features like converting lowercase to uppercase and vice versa. Also one can see the words count and character count. The application supports dark mode as well.
 
 ## Available Scripts
 
