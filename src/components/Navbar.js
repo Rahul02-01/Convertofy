@@ -3,7 +3,7 @@ import React from 'react'
 export default function Navbar(props) {
     return (
         <>
-            <nav className="navbar navbar-expand-lg mt-1 ms-2 me-2">
+            <nav className="navbar navbar-expand-lg mt-1 ms-2 me-2 rounded">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">{props.title}</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
