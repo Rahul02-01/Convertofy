@@ -40,7 +40,7 @@ export default function TextArea(props) {
     }
 
     const wCount = () =>{
-        if (text.length==0) {
+        if (text.length===0) {
             return 0;
         }
         else{
@@ -48,9 +48,6 @@ export default function TextArea(props) {
         }
     }
 
-
-
-    
     // This one just updates the values and let
     // us write the words
     const handleOnChange = (event) => {
@@ -58,8 +55,8 @@ export default function TextArea(props) {
     }
     return (
         <>
-            <div className='container mt-5'>
-                <h1>{props.start}</h1>
+            <div className={`container mt-5 bg-${props.mode}`}>
+                <h1 className={` text-${props.mode==='light'?'dark':'light'}`}>{props.start}</h1>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="Textarea" rows="7"></textarea>
                 </div>
@@ -68,7 +65,7 @@ export default function TextArea(props) {
                 {/* <button type="button" className="btn btn-primary mx-2" onClick={handleS1Click}>StYlE_1</button> */}
                 <button type="button" className="btn btn-primary mx-2" onClick={clearText}>Clear Text</button>
             </div>
-            <div className="container mt-4">
+            <div className={`container mt-4 bg-${props.mode} text-${props.mode==='light'?'dark':'light'}`}>
                 <h2>Counts</h2>
                 <p className='mb-1'>The number of characters={chCount()}</p>
                 <p className='mb-1'>The number of words={wCount()}</p>
