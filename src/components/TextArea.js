@@ -7,29 +7,19 @@ export default function TextArea(props) {
     const handleUpClick = () => {        
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("info","Text converted to Uppercase")
     }
 
 
     const handleLoClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("info","Text converted to Lowercase")
     }
 
-    // const handleS1Click = () => {
+    // const handleS1Click = (text) => {
 
-    //     let count = text.length;
-    //     let newText = "";
-    //     for (let i = 0; i < count; i++) {
-    //         if (i==0 && (i%2)==0) {
-    //             let ChangeText = text.charAt(i).toUpperCase();
-    //             newText = newText + ChangeText;
-    //         }
-    //         else{
-    //             let ChangeText = text.charAt(i).toLowerCase();
-    //             newText = newText + ChangeText;
-    //         }
-    //     }
-    //     setText(newText);
+    //     
     // }
     const chCount = ()=>{
         return text.length-(text.split(' ').length-1)
@@ -37,6 +27,7 @@ export default function TextArea(props) {
 
     const clearText = () =>{
         setText('');
+        props.showAlert("info","Text cleared")
     }
 
     const wCount = () =>{
@@ -62,7 +53,7 @@ export default function TextArea(props) {
                 </div>
                 <button type="button" className="btn btn-primary mx-2" onClick={handleUpClick}>Uppercase</button>
                 <button type="button" className="btn btn-primary mx-2" onClick={handleLoClick}>Lowercase</button>
-                {/* <button type="button" className="btn btn-primary mx-2" onClick={handleS1Click}>StYlE_1</button> */}
+                {/* <button type="button" className="btn btn-primary mx-2" onClick={handleS1Click(text)}>StYlE_1</button> */}
                 <button type="button" className="btn btn-primary mx-2" onClick={clearText}>Clear Text</button>
             </div>
             <div className={`container mt-4 bg-${props.mode} text-${props.mode==='light'?'dark':'light'}`}>
