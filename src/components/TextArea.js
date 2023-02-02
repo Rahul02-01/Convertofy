@@ -51,10 +51,10 @@ export default function TextArea(props) {
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="Textarea" rows="7"></textarea>
                 </div>
-                <button type="button" className="btn btn-primary mx-2" onClick={handleUpClick}>Uppercase</button>
-                <button type="button" className="btn btn-primary mx-2" onClick={handleLoClick}>Lowercase</button>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mx-2" onClick={handleUpClick}>Uppercase</button>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mx-2" onClick={handleLoClick}>Lowercase</button>
                 {/* <button type="button" className="btn btn-primary mx-2" onClick={handleS1Click(text)}>StYlE_1</button> */}
-                <button type="button" className="btn btn-primary mx-2" onClick={clearText}>Clear Text</button>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mx-2" onClick={clearText}>Clear Text</button>
             </div>
             <div className={`container mt-4 bg-${props.mode} text-${props.mode==='light'?'dark':'light'}`}>
                 <h2>Counts</h2>
